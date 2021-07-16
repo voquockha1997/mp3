@@ -5,7 +5,7 @@
 using namespace std;
 
 //g++ main.cpp main.h -pthread -o play
-
+//sudo apt-get install mpg123
 pthread_t Audio::thread_command;
 pthread_t Audio::thread_state;
 int Audio::state;
@@ -105,7 +105,7 @@ void* Audio::state_audio(void* obj){
 				break;
 			case AUDIO_STATE_PLAY:
 				cout << "AUDIO_STATE_PLAY\n";
-				system("../bin/./mpg123 TruyenThaiYMasewRemix-NgoKienHuyMasew-6064089.mp3 >/dev/null 2>&1");
+				system("/usr/bin/mpg123 TruyenThaiYMasewRemix-NgoKienHuyMasew-6064089.mp3 >/dev/null 2>&1");
 				break;
 		}
 		//sleep(1);
