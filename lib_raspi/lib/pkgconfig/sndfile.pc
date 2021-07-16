@@ -1,0 +1,13 @@
+prefix=/home/khavq/thailien/lib_raspi
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires:
+Requires.private:  
+Version: 1.1.0beta1
+Libs: -L${libdir} -lsndfile
+Libs.private: @EXTERNAL_MPEG_LIBS@
+Cflags: -I${includedir}
